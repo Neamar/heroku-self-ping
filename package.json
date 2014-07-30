@@ -5,7 +5,7 @@
   "bin": {},
   "scripts": {
     "test": "NODE_ENV=test mocha -R spec test.js"
-    },
+  },
   "main": "./index.js",
   "repository": {
     "type": "git",
@@ -21,7 +21,8 @@
     "async": "0.9.x",
     "anyfetch": "^1.0.10",
     "rarity": "~2.1.1",
-    "is-heroku": "~1.0.0"
+    "is-heroku": "~1.0.0",
+    "request": "~2.39.0"
   },
   "devDependencies": {
     "mocha": "~1.21.3",
