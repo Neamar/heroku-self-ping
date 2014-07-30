@@ -1,5 +1,5 @@
 {
-  "name": "anyfetch-filecleaner-hydrater",
+  "name": "heroku-self-ping",
   "version": "1.0.0",
   "author": "Matthieu Bacconnier <matthieu@anyfetch.com>",
   "bin": {},
@@ -9,7 +9,7 @@
   "main": "./index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/AnyFetch/filecleaner-hydrater.anyfetch.com"
+    "url": "https://github.com/Neamar/heroku-self-ping"
   },
   "keywords": [
     "anyfetch",
