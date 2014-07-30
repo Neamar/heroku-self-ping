@@ -1,0 +1,34 @@
+{
+  "name": "anyfetch-filecleaner-hydrater",
+  "version": "1.0.0",
+  "author": "Matthieu Bacconnier <matthieu@anyfetch.com>",
+  "bin": {
+  },
+  "scripts": {
+  },
+  "main": "./index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AnyFetch/filecleaner-hydrater.anyfetch.com"
+  },
+  "keywords": [
+    "anyfetch",
+    "hydrater",
+    "filecleaner"
+  ],
+  "dependencies": {
+    "anyfetch-hydrater": "^0.3.1",
+    "async": "0.9.x",
+    "anyfetch": "^1.0.10",
+    "rarity": "~2.1.1"
+  },
+  "devDependencies": {
+    "mocha": "1.20.x",
+    "should": "4.0.x",
+    "supertest": "0.13.x"
+  },
+  "licence": "MIT",
+  "engines": {
+    "node": ">=0.10"
+  }
+}
