@@ -16,6 +16,8 @@ This timer will only activate when your app is running on Heroku platform. The s
 
 > Heroku doesn't allow an app to retrieve its current name, which is why you need to manually specify the URL.
 
+*  `interval` (optional), number of ms between two heartbeats calls. Default to `45 * 60 * 1000` (45 minutes).
+
 ## Return
 The function returns an [interval id](https://developer.mozilla.org/en/docs/Web/API/window.setInterval) when running on Heroku and the URL is not falsy, and `false` in other cases.
 
