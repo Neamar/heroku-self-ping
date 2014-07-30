@@ -2,10 +2,10 @@
   "name": "anyfetch-filecleaner-hydrater",
   "version": "1.0.0",
   "author": "Matthieu Bacconnier <matthieu@anyfetch.com>",
-  "bin": {
-  },
+  "bin": {},
   "scripts": {
-  },
+    "test": "NODE_ENV=test mocha -R spec test.js"
+    },
   "main": "./index.js",
   "repository": {
     "type": "git",
@@ -20,10 +20,11 @@
     "anyfetch-hydrater": "^0.3.1",
     "async": "0.9.x",
     "anyfetch": "^1.0.10",
-    "rarity": "~2.1.1"
+    "rarity": "~2.1.1",
+    "is-heroku": "~1.0.0"
   },
   "devDependencies": {
-    "mocha": "1.20.x",
+    "mocha": "~1.21.3",
     "should": "4.0.x",
     "supertest": "0.13.x"
   },
