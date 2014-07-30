@@ -1,4 +1,3 @@
-
 {
   "bitwise"       : true,
   "curly"         : true,
@@ -16,7 +15,7 @@
   "trailing"      : true,
   "unused"        : true,
   "loopfunc"      : true,
-  
+
   "asi"           : false,
   "boss"          : false,
   "debug"         : false,
@@ -24,15 +23,15 @@
   "es5"           : false,
   "esnext"        : false,
   "evil"          : false,
-  "expr"          : false,
+  "expr"          : true,
   "forin"         : false,
   "funcscope"     : false,
   "globalstrict"  : false,
-  "quotmark"      : false,
   "iterator"      : false,
   "lastsemic"     : false,
   "laxbreak"      : false,
   "laxcomma"      : false,
+  "quotmark"      : false,
   "multistr"      : false,
   "onecase"       : false,
   "proto"         : false,
@@ -43,7 +42,7 @@
   "sub"           : false,
   "supernew"      : false,
   "validthis"     : false,
-  
+
   "browser"       : false,
   "couch"         : false,
   "devel"         : false,
@@ -55,12 +54,12 @@
   "prototypejs"   : false,
   "rhino"         : false,
   "wsh"           : false,
-  
+
   "nomen"         : false,
   "onevar"        : false,
   "passfail"      : false,
   "white"         : false,
-  
+
   "maxerr"        : 100,
   "predef"        : [
     "describe",
@@ -70,6 +69,6 @@
     "beforeEach"
   ],
   "indent"        : 2,
-  "maxstatements" : 20,
-  "maxcomplexity" : 10
+  "maxstatements" : 60,
+  "maxcomplexity" : 15
 }
