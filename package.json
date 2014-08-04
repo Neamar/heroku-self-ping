@@ -17,7 +17,7 @@
     "filecleaner"
   ],
   "dependencies": {
-    "is-heroku": "~1.0.0",
+    "is-heroku": "~1.0.1",
     "request": "~2.39.0"
   },
   "devDependencies": {
