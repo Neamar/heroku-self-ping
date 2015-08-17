@@ -1,6 +1,6 @@
 {
   "name": "heroku-self-ping",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "author": "Matthieu Bacconnier <matthieu@anyfetch.com>",
   "bin": {},
   "scripts": {
