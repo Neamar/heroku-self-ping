@@ -8,7 +8,7 @@ module.exports = function herokuSelfPing(url, options) {
     options = {};
   }
 
-  options.interval = options.interval || 45 * 1000 * 60;
+  options.interval = options.interval || 20 * 1000 * 60;
   options.logger = options.logger || console.log;
   options.verbose = options.verbose || false;
 
