@@ -18,10 +18,10 @@
   ],
   "dependencies": {
     "is-heroku": "~1.0.1",
-    "request": "~2.39.0"
+    "request": "~2.75.0"
   },
   "devDependencies": {
-    "mocha": "~1.21.3"
+    "mocha": "~3.1.2"
   },
   "licence": "MIT",
   "engines": {
