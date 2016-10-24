@@ -7,7 +7,7 @@ To avoid the one-hour time limit on your dyno, use this npm module:
 require('heroku-self-ping')("http://your-app-url");
 ```
 
-This will register a timer self-pinging your app every 45 minutes.
+This will register a timer self-pinging your app every 20 minutes.
 
 This timer will only activate when your app is running on Heroku platform. The script is a no-op on any other environment, including local and CI.
 
@@ -17,7 +17,7 @@ This timer will only activate when your app is running on Heroku platform. The s
 > Heroku doesn't allow an app to retrieve its current name, which is why you need to manually specify the URL.
 
 *  `options`, optional object with the following keys:
-    * `interval` number of ms between two heartbeats calls. Default to `45 * 60 * 1000` (45 minutes).
+    * `interval` number of ms between two heartbeats calls. Default to `20 * 60 * 1000` (20 minutes).
     * `logger` function to use for logging. Default to `console.log`
     * `verbose` send more information to logger function. Default to `false`.
 
