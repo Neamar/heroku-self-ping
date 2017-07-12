@@ -18,7 +18,7 @@
   ],
   "dependencies": {
     "is-heroku": "~1.0.1",
-    "request": "~2.75.0"
+    "request": "~2.81.0"
   },
   "devDependencies": {
     "mocha": "~3.1.2"
