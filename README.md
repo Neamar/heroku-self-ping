@@ -28,3 +28,13 @@ The function returns an [interval id](https://developer.mozilla.org/en/docs/Web/
 We recommend you set a custom env variable, for instance `heroku config:set APP_URL http://yourapp.herokuapp.com` and access it later from `process.env.APP_URL`.
 
 The lib won't do anything when passed an empty `url`.
+
+You can also use
+
+    `https://${process.env.HEROKU_APP_NAME}.herokuapp.com`
+
+if you first run
+
+    heroku labs:enable runtime-dyno-metadata -a <app name>
+
+See here for details: https://devcenter.heroku.com/articles/dyno-metadata
