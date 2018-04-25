@@ -25,10 +25,10 @@ module.exports = function herokuSelfPing(url, options) {
   }
 
 
-  options.verbose && options.logger("heroku-self-ping: Setting up hearbeat to " + url + " every " + options.interval + "ms.");
+  options.verbose && options.logger("heroku-self-ping: Setting up heartbeat to " + url + " every " + options.interval + "ms.");
 
   return setInterval(function() {
-    options.logger("heroku-self-ping: Sending hearbeat to " + url);
+    options.logger("heroku-self-ping: Sending heartbeat to " + url);
     request(url, function () {});
   }, options.interval);
 };
