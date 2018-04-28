@@ -19,7 +19,7 @@
   "license": "MIT",
   "dependencies": {
     "is-heroku": "~1.0.1",
-    "request": "~2.81.0"
+    "request": "~2.85.0"
   },
   "devDependencies": {
     "mocha": "~3.1.2"
