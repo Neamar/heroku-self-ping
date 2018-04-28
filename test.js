@@ -21,7 +21,11 @@ describe("Heroku self ping", function() {
     // else we're stuck with the previously cached value
     delete require.cache[require.resolve('is-heroku')];
 
-    assert.ok(herokuSelfPing("http://mypp.herokuapp.com"));
+    var interval = herokuSelfPing("http://mypp.herokuapp.com")
+    assert.ok(interval);
+
+    // Cleanup
     delete process.env.HEROKU;
+    clearInterval(interval);
   });
 });
