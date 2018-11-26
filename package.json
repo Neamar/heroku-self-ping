@@ -4,9 +4,9 @@
   "author": "Matthieu Bacconnier <matthieu@anyfetch.com>",
   "bin": {},
   "scripts": {
-    "test": "NODE_ENV=test mocha --reporter spec --require ts-node/register test.ts"
+    "test": "NODE_ENV=test mocha --reporter spec --require ts-node/register test/**/*.ts"
   },
-  "main": "./index.js",
+  "main": "./src/index.ts",
   "repository": {
     "type": "git",
     "url": "https://github.com/Neamar/heroku-self-ping"
@@ -26,7 +26,8 @@
     "ts-node": "^7.0.1",
     "typescript": "^3.1.6",
     "@types/mocha": "^5.2.5",
-    "@types/node": "^10.12.10"
+    "@types/node": "^10.12.10",
+    "@types/request": "^2.48.1"
   },
   "licence": "MIT",
   "engines": {
