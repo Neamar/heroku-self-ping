@@ -1,4 +1,5 @@
 import * as request from 'request'
+import logger from './logger'
 
 interface IOptions {
   interval?: number,
@@ -14,21 +15,20 @@ export default (url?: string, options: IOptions = {}): boolean | NodeJS.Timeout 
   }
 
   options.interval = options.interval || 20 * 1000 * 60;
-  options.logger = options.logger || console.log;
-  options.verbose = options.verbose || false;
+  logger.setLogger(options.logger)
+  logger.setIsVerbose(options.verbose || false)
 
   const isHeroku = require('is-heroku')
 
   if (!isHeroku) {
-    options.verbose && options.logger("heroku-self-ping: heroku not detected. Exiting.");
-
+    logger.verbose("heroku-self-ping: heroku not detected. Exiting.")
     return false;
   }
-
-  options.verbose && options.logger(`heroku-self-ping: Setting up heartbeat to ${url} every ${options.interval} ms.`);
+  logger.verbose(`heroku-self-ping: Setting up heartbeat to ${url} every ${options.interval} ms.`)
 
   return setInterval(() => {
-    options.logger(`heroku-self-ping: Sending heartbeat to ${url}`);
+    logger.log(`heroku-self-ping: Sending heartbeat to ${url}`)
+
     request(url, function () { });
   }, options.interval);
 };
