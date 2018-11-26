@@ -20,7 +20,7 @@
   "dependencies": {
     "@types/mocha": "^5.2.5",
     "@types/node": "^10.12.10",
-    "is-heroku": "~1.0.1",
+    "is-heroku": "^2.0.0",
     "request": "~2.85.0",
     "ts-node": "^7.0.1",
     "typescript": "^3.1.6"
