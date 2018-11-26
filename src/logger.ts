@@ -4,6 +4,9 @@ namespace Logger {
 
 
   export const setLogger = (newLogger: (arg: string) => any) => {
+    if (typeof logger !== 'function') {
+      throw 'Error: Provided logger is not a function!'
+    }
     logger = newLogger
   }
 

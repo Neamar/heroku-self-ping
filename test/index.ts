@@ -1,19 +1,21 @@
-import * as assert from 'assert'
-import herokuSelfPing from './../src/index'
+import * as assert from 'assert';
+import herokuSelfPing from './../src/index';
+
+const TEST_URL = "http://mypp.herokuapp.com";
 
 describe("Heroku self ping", () => {
   it("should skip when URL is not defined", () => {
 
     const output = herokuSelfPing(null, {
       logger: text => {
-        assert.strictEqual(text, 'heroku-self-ping: no url provided. Exiting.')
+        assert.strictEqual(text, 'heroku-self-ping: no url provided. Exiting.');
       }
-    })
+    });
     assert.ok(!output);
   });
 
   it("should skip when not on Heroku", () => {
-    const output = herokuSelfPing("http://mypp.herokuapp.com", {
+    const output = herokuSelfPing(TEST_URL, {
       logger: text => {
         assert.strictEqual(text, 'heroku-self-ping: heroku not detected. Exiting.')
       }
@@ -28,7 +30,7 @@ describe("Heroku self ping", () => {
     // else we're stuck with the previously cached value
     delete require.cache[require.resolve('is-heroku')];
 
-    const interval = herokuSelfPing("http://mypp.herokuapp.com") as NodeJS.Timeout
+    const interval = herokuSelfPing(TEST_URL) as NodeJS.Timeout
     assert.ok(interval);
 
     // Cleanup
@@ -44,10 +46,9 @@ describe("Heroku self ping", () => {
     delete require.cache[require.resolve('is-heroku')];
     
     const INTERVAL = 2 // ms
-    const URL = "http://mypp.herokuapp.com"
-    const expectedLogOutput = `heroku-self-ping: Sending heartbeat to ${URL}`
+    const expectedLogOutput = `heroku-self-ping: Sending heartbeat to ${TEST_URL}`
 
-    const interval = herokuSelfPing(URL, {
+    const interval = herokuSelfPing(TEST_URL, {
       interval: INTERVAL,
       logger: text => {
         assert.strictEqual(text, expectedLogOutput)

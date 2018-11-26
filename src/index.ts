@@ -15,7 +15,7 @@ export default (url?: string, options: IOptions = {}): boolean | NodeJS.Timeout 
   }
 
   options.interval = options.interval || 20 * 1000 * 60;
-  logger.setLogger(options.logger)
+  logger.setLogger(options.logger || console.log)
   logger.setIsVerbose(options.verbose || false)
 
   const isHeroku = require('is-heroku')
