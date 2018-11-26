@@ -1,15 +1,19 @@
 {
-  "compilerOptions": {
-      "module": "commonjs",
-      "target": "es2017",
-      "lib": [
-          "es2017"
-      ],
-      "noImplicitAny": true,
-      "outDir": "./dist",
-      "sourceMap": true
-  },
-  "include": [
-      "./src/**/*"
-  ]
+    "compilerOptions": {
+        "module": "commonjs",
+        "target": "es5",
+        "lib": [
+            "es2017"
+        ],
+        "declaration": true,
+        "noImplicitAny": true,
+        "outDir": "./dist",
+        "sourceMap": true
+    },
+    "include": [
+        "./src/**/*"
+    ],
+    "exclude": [
+        "node_modules"
+    ]
 }

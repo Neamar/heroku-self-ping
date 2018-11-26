@@ -1,25 +1,26 @@
 # Projects files
 keys.sh
+dist
 
 # OS Artifacts
 *.DS_Store
 
 # Vagrant Artifacts
-.vagrant/*
+.vagrant
 Berksfile.lock
 
 # NPM Artifacts
-node_modules/*
+node_modules
 npm-debug.log
 libpeerconnection.log
 
 # Docco artifacts
-docs/*
+docs
 
 # IDE Artifacts
-.idea/*
+.idea
 *.iml
 *.sublime-*
 
 # Jekyll artifacts
-_site/*
+_site
