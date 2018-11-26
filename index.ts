@@ -1,12 +1,12 @@
-"use strict";
+import * as request from 'request'
 
-var request = require('request');
+interface IOptions {
+  interval?: number,
+  logger?: any,
+  verbose?: boolean
+}
 
-
-module.exports = function herokuSelfPing(url, options) {
-  if(!options) {
-    options = {};
-  }
+export default (url?: string, options: IOptions = {}): boolean | NodeJS.Timeout => {
 
   options.interval = options.interval || 20 * 1000 * 60;
   options.logger = options.logger || console.log;
@@ -14,11 +14,11 @@ module.exports = function herokuSelfPing(url, options) {
 
   var isHeroku = require("is-heroku");
 
-  if(!url) {
+  if (!url) {
     options.verbose && options.logger("heroku-self-ping: no url provided. Exiting.");
     return false;
   }
-  if(!isHeroku) {
+  if (!isHeroku) {
     options.verbose && options.logger("heroku-self-ping: heroku not detected. Exiting.");
 
     return false;
@@ -27,8 +27,8 @@ module.exports = function herokuSelfPing(url, options) {
 
   options.verbose && options.logger("heroku-self-ping: Setting up heartbeat to " + url + " every " + options.interval + "ms.");
 
-  return setInterval(function() {
+  return setInterval(function () {
     options.logger("heroku-self-ping: Sending heartbeat to " + url);
-    request(url, function () {});
+    request(url, function () { });
   }, options.interval);
 };

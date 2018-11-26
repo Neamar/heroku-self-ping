@@ -4,7 +4,7 @@
   "author": "Matthieu Bacconnier <matthieu@anyfetch.com>",
   "bin": {},
   "scripts": {
-    "test": "NODE_ENV=test mocha -R spec test.js"
+    "test": "NODE_ENV=test mocha --reporter spec --require ts-node/register test.ts"
   },
   "main": "./index.js",
   "repository": {
@@ -18,14 +18,18 @@
   ],
   "license": "MIT",
   "dependencies": {
+    "@types/mocha": "^5.2.5",
+    "@types/node": "^10.12.10",
     "is-heroku": "~1.0.1",
-    "request": "~2.85.0"
+    "request": "~2.85.0",
+    "ts-node": "^7.0.1",
+    "typescript": "^3.1.6"
   },
   "devDependencies": {
     "mocha": "~5.1.1"
   },
   "licence": "MIT",
   "engines": {
-    "node": ">=4.0.0"
+    "node": ">=8.0.0"
   }
 }
