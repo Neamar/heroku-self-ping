@@ -1,7 +1,7 @@
 Heroku self ping
 ================
 
-To avoid the one-hour time limit on your dyno, use this npm module:
+To avoid the thirty minutes time limit on your dyno, use this npm module:
 
 ```js
 require('heroku-self-ping')("http://your-app-url");
