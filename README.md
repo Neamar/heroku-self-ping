@@ -4,7 +4,14 @@ Heroku self ping
 To avoid the thirty minutes time limit on your dyno, use this npm module:
 
 ```js
-require('heroku-self-ping')("http://your-app-url");
+require('heroku-self-ping').default("http://your-app-url");
+```
+
+or:
+```js
+import hsp from 'heroku-self-ping';
+
+hsp("http://your-app-url");
 ```
 
 This will register a timer self-pinging your app every 20 minutes.
