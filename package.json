@@ -24,6 +24,7 @@
   "license": "MIT",
   "dependencies": {
     "@types/got": "^9.6.9",
+    "got": "^10.7.0",
     "is-heroku": "^2.0.0"
   },
   "devDependencies": {
