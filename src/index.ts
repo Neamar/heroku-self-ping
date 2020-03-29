@@ -1,5 +1,5 @@
-import fetch from 'unfetch'
 import logger from './logger'
+import * as got from 'got';
 
 interface IOptions {
   interval?: number,
@@ -27,8 +27,16 @@ export default (url?: string, options: IOptions = {}): boolean | NodeJS.Timeout 
   logger.verbose(`heroku-self-ping: Setting up heartbeat to ${url} every ${options.interval} ms.`)
 
   return setInterval(() => {
-    logger.log(`heroku-self-ping: Sending heartbeat to ${url}`)
+    logger.log(`heroku-self-ping: Sending heartbeat to ${url}`);
 
-    fetch(url);
+    (async () => {
+      try {
+        const response = await got(url);
+        console.log('statusCode:', response.statusCode);
+        console.log('body:', response.body);
+      } catch (error) {
+        console.log('error:', error);
+      }
+    })();
   }, options.interval);
 };
