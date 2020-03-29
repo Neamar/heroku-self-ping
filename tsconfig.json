@@ -1,19 +1,31 @@
 {
-    "compilerOptions": {
-        "module": "commonjs",
-        "target": "es5",
-        "lib": [
-            "es2017"
-        ],
-        "declaration": true,
-        "noImplicitAny": true,
-        "outDir": "./dist",
-        "sourceMap": true
+  "compilerOptions": {
+    "target": "es2017",
+    "module": "commonjs",
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "incremental": true,
+    "outDir": "./dist",
+
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+
+    "moduleResolution": "node",
+    "baseUrl": ".",
+    "paths": {
+      "*": ["./types/*"]
     },
-    "include": [
-        "./src/**/*"
-    ],
-    "exclude": [
-        "node_modules"
-    ]
+    "esModuleInterop": true
+
+    // Not using this setting because its only used to require the package.json file, and that would change the
+    // structure of the files in the dist directory because package.json is not located inside src. It would be nice
+    // to use import instead of require(), but its not worth the tradeoff of restructuring the build (for now).
+    // "resolveJsonModule": true,
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules"]
 }

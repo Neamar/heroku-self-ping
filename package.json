@@ -24,7 +24,7 @@
   "license": "MIT",
   "dependencies": {
     "is-heroku": "^2.0.0",
-    "request": "~2.85.0"
+    "unfetch": "^4.1.0"
   },
   "devDependencies": {
     "mocha": "~5.1.1",
