@@ -1,5 +1,5 @@
 import logger from './logger'
-import * as got from 'got';
+import * as request from 'superagent';
 
 interface IOptions {
   interval?: number,
@@ -29,14 +29,9 @@ export default (url?: string, options: IOptions = {}): boolean | NodeJS.Timeout 
   return setInterval(() => {
     logger.log(`heroku-self-ping: Sending heartbeat to ${url}`);
 
-    (async () => {
-      try {
-        const response = await got(url);
-        console.log('statusCode:', response.statusCode);
-        console.log('body:', response.body);
-      } catch (error) {
-        console.log('error:', error);
-      }
-    })();
+    request.get(url, (err, res) => {
+      if (err) throw err;
+      console.log(res.text);
+    });
   }, options.interval);
 };
