@@ -1,5 +1,5 @@
-import logger from './logger'
 import * as request from 'superagent';
+import logger from './logger'
 
 interface IOptions {
   interval?: number,

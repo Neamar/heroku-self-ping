@@ -23,13 +23,13 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "@types/superagent": "^4.1.7",
     "is-heroku": "^2.0.0",
     "superagent": "^5.2.2"
   },
   "devDependencies": {
     "@types/mocha": "^5.2.5",
     "@types/node": "^10.12.10",
+    "@types/superagent": "^4.1.7",
     "mocha": "~5.1.1",
     "ts-node": "^7.0.1",
     "typescript": "^3.1.6"
