@@ -29,9 +29,6 @@ export default (url?: string, options: IOptions = {}): boolean | NodeJS.Timeout 
   return setInterval(() => {
     logger.log(`heroku-self-ping: Sending heartbeat to ${url}`);
 
-    request.get(url, (err, res) => {
-      if (err) throw err;
-      console.log(res.text);
-    });
+    request.get(url);
   }, options.interval);
 };
