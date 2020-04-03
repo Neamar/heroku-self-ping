@@ -1,4 +1,4 @@
-import * as request from 'request'
+import * as request from 'superagent';
 import logger from './logger'
 
 interface IOptions {
@@ -27,8 +27,8 @@ export default (url?: string, options: IOptions = {}): boolean | NodeJS.Timeout 
   logger.verbose(`heroku-self-ping: Setting up heartbeat to ${url} every ${options.interval} ms.`)
 
   return setInterval(() => {
-    logger.log(`heroku-self-ping: Sending heartbeat to ${url}`)
+    logger.log(`heroku-self-ping: Sending heartbeat to ${url}`);
 
-    request(url, function () { });
+    request.get(url);
   }, options.interval);
 };
