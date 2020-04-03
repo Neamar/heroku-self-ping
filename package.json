@@ -1,6 +1,6 @@
 {
   "name": "heroku-self-ping",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "author": "Matthieu Bacconnier <matthieu@anyfetch.com>",
   "description": "Node.js script for keeping your Heroku application alive. Avoid time limit on your dyno.",
   "bin": {},
